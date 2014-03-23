@@ -1,0 +1,22 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion "Google Inc.:Glass Development Kit Sneak Peek:15"
+    buildToolsVersion "19.0.3"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 15
+    }
+
+    dependencies {
+        compile 'com.squareup.retrofit:retrofit:1.5.0'
+    }
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
